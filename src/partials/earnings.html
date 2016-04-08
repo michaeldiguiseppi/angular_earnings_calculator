@@ -1,0 +1,18 @@
+<div ng-controller="earningsCtrl">
+  <!-- tip total -->
+  <!-- meal count -->
+  <!-- average tip per meal -->
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+      <p>
+        <strong>Tips: </strong> {{ totals.tips }}
+      </p>
+      <p>
+        <strong>Total Meals: </strong> {{ totals.count }}
+      </p>
+      <p>
+        <strong>Average Tip per Meal: </strong> {{ totals.tips / totals.count }}
+      </p>
+    </div>
+  </div>
+</div>

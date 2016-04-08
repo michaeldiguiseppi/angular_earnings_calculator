@@ -1,0 +1,37 @@
+<div ng-controller="detailsCtrl">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <h1>Enter details for Meal {{ mealCounter }}</h1>
+    </div>
+  </div>
+  <form class="form-horizontal" name="mealForm" ng-submit="formSubmit()">
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-3">
+        <label for="basePrice" class="form-control-label">Base Meal Price: $</label>
+        <input type="text" class="form-control" name="basePrice" ng-model="meal.basePrice" min="0" />
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-3">
+        <label for="taxRate" class="form-control-label">Tax Rate: %</label>
+        <input type="text" class="form-control" name="taxRate" ng-model="meal.taxRate" min="0" />
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-3">
+        <label for="tipPercent" class="form-control-label">Tip Percentage: %</label>
+        <input type="text" class="form-control" name="tipPercent" ng-model="meal.tipPercent" min="0" />
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-3">
+        <button type="submit" class="btn btn-md btn-default">Add Meal</button>
+        &nbsp;&nbsp;
+        <button type="reset" class="btn btn-md btn-default">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>

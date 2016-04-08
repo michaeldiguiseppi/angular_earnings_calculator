@@ -2,29 +2,43 @@
 <html lang="en" ng-app='myApp'>
   <head>
     <meta charset="utf-8">
-    <title>Untitled</title>
-
+    <title>Earnings Calculator</title>
+    <base href="/" />
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
-  <body>
+  <body ng-cloak>
     <h1 class="text-center">Earnings Calculator</h1>
-    <ul>
-      <li><a href="/details">Meal Details</a></li>
-      <li><a href="/charges">Charge Overview</a></li>
-      <li><a href="/earnings">Earnings Info</a></li>
-    </ul>
-    <hr />
+    <div class="container">
+      <div class="col-lg-6 col-lg-offset-3">
+        <div class="row">
+          <div class="col-lg-4">
+            <a class="btn btn-md btn-primary" href="/details">Meal Details</a>
+          </div>
+          <div class="col-lg-4">
+            <a class="btn btn-md btn-primary" href="/charges">Charge Overview</a>
+          </div>
+          <div class="col-lg-4">
+            <a class="btn btn-md btn-primary" href="/earnings">Earnings Info</a>
+          </div>
+        </div>
+        <hr />
+      </div>
+    </div>
+    <div class="container">
+      <div ng-view></div>
+    </div>
+    <div class="container">
+      <div class="col-lg-6 col-lg-offset-3">
+        <hr />
+        <button ng-controller="resetCtrl" ng-click="reset()" class="btn btn-default btn-md">Reset All</button>
+      </div>
+    </div>
 
-
-
-
-    <hr />
-    <button ng-controller="resetCtrl" ng-click="reset()" class="btn btn-primary btn-lg">Reset All</button>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/directives.js"></script>
